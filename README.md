@@ -1,7 +1,7 @@
 # Assignment 9 - NamedTuples
  
 
-## Task1:  250 points (including 5 test cases)
+## Task1 :  250 points (including 5 test cases)
   ### Use the Faker library to get 10000 random profiles. Using namedtuple, calculate the largest blood type, mean-current_location, oldest_person_age, and average age (add proper doc-strings).
 
 - 10000 random profiles were stored in an namedtuple object.
@@ -15,11 +15,11 @@
     average age (in days) | **mean_age_nt(ntobj:namedtuple)**
 - Doc strings were added to namedtuple class which flows downstream and also proper docstrings were written to the functions
 - Following 5 test cases were written
-  - test1
-  - test1
-  - test1
-  - test1
-  - test1
+	- test_return_namedtuple():
+	- test_max_bloodgroup_nt():
+	- test_mean_currentlocation_nt():
+	- test_oldest_age_nt():
+	- test_mean_age_nt():
  - Here is the code snippet:
   ``` python
   def create_nt_from_fakeprofile(num_of_records:int):
@@ -66,7 +66,7 @@
   ```
 
     
-## Task 2:  250 points (including 5 test cases)
+## Task 2 :  250 points (including 5 test cases)
   ### Do the same thing above using a dictionary. Prove that namedtuple is faster.
 
 - Named tuple object was converted to dictionary.
@@ -99,11 +99,11 @@
   Gain is {(endd-startd)/(endn-endd):.3f}%')
   ```
 - Following 5 test cases were written
-  - test1
-  - test1
-  - test1
-  - test1
-  - test1
+	- test_return_dict():
+	- test_max_bloodgroup_dict():
+	- test_mean_currentlocation_dict():
+	- test_oldest_age_dict():
+	- test_mean_age_dict():
 
 - Here is the code snippet:
   ``` python
@@ -150,7 +150,7 @@
 
 
 
-## Task 3:  500 points (including 10 test cases)
+## Task 3 :  500 points (including 10 test cases)
    ### Create fake data (you can use Faker for company names) for imaginary stock exchange for top 100 companies (name, symbol, open, high, close). Assign a random weight to all the companies. Calculate and show what value the stock market started at, what was the highest value during the day, and where did it end. Make sure your open, high, close are not totally random. You can only use namedtuple.
 
 - namedtuple 'stockexchange' was created with the following variables - 'stockexchange(company, symbol, openn, high, close, weight, marketcap, 
@@ -221,10 +221,52 @@ trades)'
                   \nTotal Trades : {tn} 
                   \nChange is {((sum(initial.close)-sum(initial.openn))/sum(initial.openn))*100:.2f} %')
   ```
+- Output
+    ```
+    >>> stock_trades_days(5,200)
+
+    The opening marketcap ws 4997.5 Billion
+    The highest marketcap is 5996.91 Billion
+    The closing marketcap is 4955.72 Billion
+    Total Trades : 200
+    Change is -0.84 %
+
+    The opening marketcap ws 4955.72 Billion
+    The highest marketcap is 5946.1 Billion
+    The closing marketcap is 5029.1 Billion
+    Total Trades : 199
+    Change is 1.48 %
+
+    The opening marketcap ws 5029.1 Billion
+    The highest marketcap is 6034.92 Billion
+    The closing marketcap is 5037.11 Billion
+    Total Trades : 198
+    Change is 0.16 %
+
+    The opening marketcap ws 5037.11 Billion
+    The highest marketcap is 6044.46 Billion
+    The closing marketcap is 4988.44 Billion
+    Total Trades : 197
+    Change is -0.97 %
+
+    The opening marketcap ws 4988.44 Billion
+    The highest marketcap is 5986.13 Billion
+    The closing marketcap is 4922.13 Billion
+    Total Trades : 196
+    Change is -1.33 %
+    ```
+
 - Following 5 test cases were written
-- Following 5 test cases were written
-  - test1
-  - test1
-  - test1
-  - test1
-  - test1
+
+Test name | Description
+--------------------- | -------------------
+test_se_blank_input() | Check when input is blank
+test_se_zero_input() | Checks for zero input
+test_se_negative_input() | Checks for negative input
+test_se_create_fn_docexists() | Checks if doc exists for create function
+test_se_days_trade_docexists() | Checks if doc exists for days trade function
+test_se_company_proper_return() | Checks for the proper return type of company.
+test_se_symbol_proper_return() | Checks for the proper return type of symbol.
+test_se_openn_proper_return() | Checks for the proper return type of openn.
+test_se_high_proper_return() | Checks for the proper return type of high.
+test_se_close_proper_return() | Checks for the proper return type of close.
