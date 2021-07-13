@@ -1,4 +1,4 @@
-# Assignment 9 - Namedtuples
+# Assignment 9 - NamedTuples
  
 
 ## Task1:  250 points (including 5 test cases)
