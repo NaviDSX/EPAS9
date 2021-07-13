@@ -2,13 +2,13 @@
   "tests": [
     {
       "name": "test_session9",
-      "setup": "sudo -H pip3 install pytest",
+      "setup": "sudo -H pip3 install pytest; sudo -H pip3 install Faker",
       "run": "pytest -vv",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 5,
-      "points": 450
+      "points": 1000
     }
   ]
 }
